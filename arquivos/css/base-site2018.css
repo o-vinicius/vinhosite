@@ -9,6 +9,7 @@ body {
 	font-size: 16px !important;
 	line-height: 1.5 !important;
     letter-spacing: normal !important;
+    overflow-x: hidden;
 }
 h1, h2, h3 {
 	font-family: 'Raleway', sans-serif;
@@ -45,6 +46,30 @@ section {
 }
 
 /* ELEMENTOS GERAIS */
+#loader {
+	position:fixed;
+	z-index:999999;
+	background-color:#eee !important;
+	width:100%;
+	height:100%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	transition: all .5s ease-in-out;
+    top: 0;
+    left: 0;
+    background-image: url(../images/load.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#loader {
+	background-color:rgba(189,202,120,1);
+	overflow:hidden;
+}
+#loader.carregado {
+    opacity: 0;
+    visibility: hidden;
+}
 .fundo {
 	background-color: #fff;
 	border-top: 20px solid #fff;
@@ -893,12 +918,12 @@ p.preco span {
 #comprove .tabs.comprove .tabs__content {
     position: relative;
     border-radius: 10px;
-    width: 85.1%;
-    margin: 0 auto 0 6.6%;
+    width: 88.1%;
+    margin: 0 auto 0 4.6%;
     z-index: 2;
 }
 #comprove .tabs.comprove .informacao.owl-carousel .owl-nav .owl-prev {
-    left: -50px;
+    left: -30px;
 }
 #comprove .tabs.comprove .informacao {
     top: -210px;
@@ -956,7 +981,7 @@ p.preco span {
 #comprove .tabs.comprove .informacao .item > .extras {
     position: relative;
     margin-top: 100px;
-    width: 25%;
+    width: 24%;
     height: 210px;
     text-align: center;
 }
@@ -980,7 +1005,7 @@ p.preco span {
 #comprove .tabs.comprove .informacao .item > .extras .desconto {
     position: absolute;
     top: -110px;
-    right: -620px;
+    right: -600px;
     background-image: url(../images/selo-desconto.png);
     width: 368px;
     height: 322px;
@@ -1011,7 +1036,6 @@ p.preco span {
 
 #comprove .tabs__menu {
     position: absolute !important;
-    bottom: 0;
     right: 0;
 }
 
@@ -1067,4 +1091,14 @@ select.tabs__menu {
     box-shadow: none !important;
     z-index: 99;
     color: #950b42;
+    background-image: url(../images/select-seta.png);
+    background-position: 94% center;
+    background-repeat: no-repeat;
+}
+select.tabs__menu option {
+    color: #555 !important
+}
+
+#casa-rio-verde .tabs__menu {
+    margin-top: 20px;
 }

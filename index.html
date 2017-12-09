@@ -304,8 +304,8 @@
 
 
         <!-- INÍCIO HTML NOVA HOME -->
+        <div id="loader"></div>
         <div class="fundo">
-            
 
             <!-- INÍCIO CARROSSEL SELEÇÕES -->
             <section id="vinhoclub" class="bg-cinza">
@@ -315,12 +315,6 @@
                         <h2>O Clube de Vinhos mais inteligente do Brasil, inclusive no preço.</h2>
                         <p>Nossas seleções são feitas por Wine Hunters com <strong>28 anos de experiência</strong> e acesso a <strong>milhares de rótulos</strong>. Por isso, temos a melhor relação <strong>preço/qualidade</strong>.</p>
                     </div>
-                    <!--
-                    <ul class="tabs__menu">
-                            <li class="" data-tab="unique">Seleção Unique</li>
-                            <li class="" data-tab="ouro">Seleção Ouro</li>
-                            <li class="" data-tab="platinum">Seleção Platinum</li>
-                    </ul>-->
                     <div class="tabs club sync">
                         <select class="tabs__menu">
                             <option value="">Conheça nossas 3 seleções</option>
@@ -645,7 +639,12 @@
                             <h3>Personalidade</h3>
                             <h3>Elegância</h3>
                             <h3>Equilíbrio</h3>
-                            <p><a href="#" class="botao">Conheça nossas 3 seleções</a></p>
+                            <select class="tabs__menu">
+                                <option value="">Conheça nossas 3 seleções</option>
+                                <option value="unique">Seleção Unique</option>
+                                <option value="ouro">Seleção Ouro</option>
+                                <option value="platinum">Seleção Platinum</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -1146,7 +1145,7 @@
                                         </div>
                                         <div>
                                             <p class="preco"><span>R$ </span>52,85</p>
-                                            <p>Se você não for assinante do Vinhoclube e comprar esse vinho avulso no Vinhosite.</p>
+                                            <p>Se você não for assinante do Vinhoclube e comprar esse vinho avulso no Vinhosite. Se você não for assinante do Vinhoclube e comprar esse vinho avulso no Vinhosite.</p>
                                         </div>
                                         <div class="seta"></div>
                                         <div>
@@ -1342,6 +1341,11 @@ Encontramos um erro no cadastro de suas informações.<br />Por favor, tente nov
     <script type="text/javascript" src="arquivos/js/tooltipster.bundle.min.js"></script>
 
     <script>
+        
+$(window).load(function() {
+	$("#loader").addClass("carregado");
+});
+        
         $('.depoimentos').owlCarousel({
             smartSpeed: 750,
             loop: true,
@@ -1458,9 +1462,10 @@ Encontramos um erro no cadastro de suas informações.<br />Por favor, tente nov
 
         $("#comprove .tabs.comprove .informacao.owl-carousel .owl-nav .owl-next, #comprove .tabs.comprove .informacao.owl-carousel .owl-nav .owl-prev").css('top', maxHeight / 2 + 250 - 18);
         
+        $('#comprove .tabs__menu').css('top' , maxHeight + 105)
+        
         $('select.tabs__menu').change(function(){
             var idselecao = $(this).val();
-            
             if(idselecao != "") {
                 $('[data-selecao]').addClass('disable');
                 $('[data-selecao]').removeClass('active');
@@ -1470,9 +1475,8 @@ Encontramos um erro no cadastro de suas informações.<br />Por favor, tente nov
                 $("[data-tab]").removeClass('active');
                 $('[data-tab="'+idselecao+'"]').addClass('active');
                 
-                $("select.tabs__menu").val($('option:contains("'+idselecao+'")').val())
+                $("select.tabs__menu").val($(this).val());
             }
-
         });
 
     </script>
