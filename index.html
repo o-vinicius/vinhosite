@@ -1,6 +1,6 @@
 <!DOCTYPE html >
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
-will eh viado
+
 <head>
     <meta name="language" content="pt-BR" />
     <meta name="country" content="BRA" />
@@ -305,6 +305,7 @@ will eh viado
 
         <!-- INÍCIO HTML NOVA HOME -->
         <div class="fundo">
+            
 
             <!-- INÍCIO CARROSSEL SELEÇÕES -->
             <section id="vinhoclub" class="bg-cinza">
@@ -314,12 +315,19 @@ will eh viado
                         <h2>O Clube de Vinhos mais inteligente do Brasil, inclusive no preço.</h2>
                         <p>Nossas seleções são feitas por Wine Hunters com <strong>28 anos de experiência</strong> e acesso a <strong>milhares de rótulos</strong>. Por isso, temos a melhor relação <strong>preço/qualidade</strong>.</p>
                     </div>
-                    <div class="tabs club">
-                        <ul class="tabs__menu">
+                    <!--
+                    <ul class="tabs__menu">
                             <li class="" data-tab="unique">Seleção Unique</li>
                             <li class="" data-tab="ouro">Seleção Ouro</li>
                             <li class="" data-tab="platinum">Seleção Platinum</li>
-                        </ul>
+                    </ul>-->
+                    <div class="tabs club sync">
+                        <select class="tabs__menu">
+                            <option value="">Conheça nossas 3 seleções</option>
+                            <option value="unique">Seleção Unique</option>
+                            <option value="ouro">Seleção Ouro</option>
+                            <option value="platinum">Seleção Platinum</option>
+                        </select>
                         <div class="tabs__content">
                             <!-- INFORMACÕES UNIQUE -->
                             <div class="informacao" data-selecao="unique">
@@ -728,12 +736,12 @@ will eh viado
             </section>
             <!-- FIM DEPOIMENTOS -->
 
-            <!-- INÍCIO INFORMACÕES -->
+            <!-- INÍCIO SELEÇÃO INFORMACÕES -->
             <section id="informacoes">
                 <div class="container">
                     <h2 class="texto-centro">VinhoClube oferece 3 seleções de vinhos de <br /><strong>qualidade notável</strong> com: personalidade, <br />elegância e equilíbrio.</h2>
                     <h3 class="texto-centro">Escolha a sua seleção preferida:</h3>
-                    <div class="tabs selecao">
+                    <div class="tabs selecao sync">
                         <ul class="tabs__menu">
                             <li class="" data-tab="unique"><img src="arquivos/images/selo-unique-medio.png" alt="Seleção Unique" /></li>
                             <li class="" data-tab="ouro"><img src="arquivos/images/selo-ouro-medio.png" alt="Seleção Ouro" /></li>
@@ -912,7 +920,7 @@ will eh viado
                                 </div>
                             </div>
                             <!-- INFORMACÕES PLATINUM -->
-                            <div class="informacao" data-selecao="ouro" data-produtos="1">
+                            <div class="informacao" data-selecao="platinum" data-produtos="1">
                                 <div class="lista-itens">
                                     <div class="item">
                                         <div class="imagem">
@@ -983,9 +991,15 @@ will eh viado
             <section id="comprove" class="bg-cinza">
                 <div class="container">
                     <h2>Comprove como o VinhoClube é vantajoso comparando <br />os preços dos vinhos selecionados para os assinantes:</h2>
-                    <div class="tabs comprove">
+                    <div class="tabs comprove sync">
+                        <select class="tabs__menu">
+                            <option value="">Conheça nossas 3 seleções</option>
+                            <option value="unique">Seleção Unique</option>
+                            <option value="ouro">Seleção Ouro</option>
+                            <option value="platinum">Seleção Platinum</option>
+                        </select>
                         <div class="tabs__content">
-                            <div class="informacao owl-carousel owl-theme">
+                            <div class="informacao owl-carousel owl-theme" data-selecao="unique">
                                 <div class="item">
                                     <div class="infos">
                                         <div class="vinho">
@@ -1068,7 +1082,7 @@ will eh viado
                                     </div>
                                 </div>
                             </div>
-                            <div class="informacao owl-carousel owl-theme">
+                            <div class="informacao owl-carousel owl-theme" data-selecao="ouro">
                                 <div class="item">
                                     <div class="infos">
                                         <div class="vinho">
@@ -1124,7 +1138,7 @@ will eh viado
                                     </div>
                                 </div>
                             </div>
-                            <div class="informacao owl-carousel owl-theme">
+                            <div class="informacao owl-carousel owl-theme" data-selecao="platinum">
                                 <div class="item">
                                     <div class="infos">
                                         <div class="vinho">
@@ -1154,11 +1168,7 @@ will eh viado
                                 </div>
                             </div>
                         </div>
-                        <ul class="tabs__menu">
-                            <li class="" data-tab="unique">Seleção Unique"</li>
-                            <li class="" data-tab="ouro">Seleção Ouro"</li>
-                            <li class="" data-tab="platinum">Seleção Platinum</li>
-                        </ul>
+                        <div class="bg-comprove"></div>
                     </div>
                 </div>
             </section>
@@ -1341,7 +1351,7 @@ Encontramos um erro no cadastro de suas informações.<br />Por favor, tente nov
             items: 3
         });
 
-        $('.tabs.club, .tabs.selecao, .tabs.comprove').tabtab({
+        $('.synca').tabtab({
             tabMenu: '.tabs__menu', // direct container of the tab menu items
             tabContent: '.tabs__content',
             startSlide: 1,
@@ -1387,21 +1397,83 @@ Encontramos um erro no cadastro de suas informações.<br />Por favor, tente nov
         var alturaHeader = $("#vinhoclub .header").outerHeight();
         var alturaMenuClub = $("#vinhoclub .tabs__menu").outerHeight();
 
-        $("#vinhoclub .tabs.club > .tabs__menu").css('top', alturaHeader);
-        $("#vinhoclub .extras").css('margin-top', alturaHeader + alturaMenuClub);
+        $("#vinhoclub .tabs.club > .tabs__menu").css('top', alturaHeader+10);
+        $("#vinhoclub .extras").css('margin-top', alturaHeader + alturaMenuClub+40);
 
         var maxHeight = 0;
-
-        $("#comprove .tabs.comprove .informacao .item > .infos").each(function() {
+        
+        $(".tabs.club .informacao").each(function() {
             if ($(this).height() > maxHeight) {
                 maxHeight = $(this).height();
             }
         });
+        $(".tabs.club").height(maxHeight);        
+        
+        $(".tabs.selecao .informacao").each(function() {
+            if ($(this).height() > maxHeight) {
+                maxHeight = $(this).outerHeight() + 150;
+            }
+        });
+        $(".tabs.selecao > .tabs__content").height(maxHeight);
+        
+        
+        $(".tabs.comprove .informacao").each(function() {
+            if ($(this).height() > maxHeight) {
+                maxHeight = $(this).innerHeight();
+            }
+        });
+        $(".tabs.comprove > .tabs__content").height(maxHeight-330);
+        
+        
+        $("[data-selecao]").addClass('disable');
+        
+        $("[data-selecao='unique']").removeClass('disable');
+        $("[data-selecao='unique'],[data-tab='unique']").addClass('active');
+        
+        $("[data-tab]").click(function(){
+            var idselecao = $(this).attr('data-tab')
+            
+            $('[data-selecao]').addClass('disable');
+            $('[data-selecao]').removeClass('active');
+            $('[data-selecao="'+idselecao+'"]').removeClass('disable');
+            $('[data-selecao="'+idselecao+'"]').addClass('active');
+            
+            $("[data-tab]").removeClass('active');
+            $('[data-tab="'+idselecao+'"]').addClass('active');
+            
+            console.log(idselecao)
+        });
+        
+
+        $("#comprove .tabs.comprove .informacao .item > .infos").each(function() {
+            if ($(this).outerWidth() > maxHeight) {
+                maxHeight = $(this).height();
+            }
+        });
+        
+        $("#comprove .tabs.comprove .bg-comprove").height(maxHeight + 70);
 
         $("#comprove .tabs.comprove .informacao .item > .infos").height(maxHeight);
-        $("#comprove .tabs.comprove .tabs__content").height(maxHeight + 70);
+        
 
         $("#comprove .tabs.comprove .informacao.owl-carousel .owl-nav .owl-next, #comprove .tabs.comprove .informacao.owl-carousel .owl-nav .owl-prev").css('top', maxHeight / 2 + 250 - 18);
+        
+        $('select.tabs__menu').change(function(){
+            var idselecao = $(this).val();
+            
+            if(idselecao != "") {
+                $('[data-selecao]').addClass('disable');
+                $('[data-selecao]').removeClass('active');
+                $('[data-selecao="'+idselecao+'"]').removeClass('disable');
+                $('[data-selecao="'+idselecao+'"]').addClass('active');
+
+                $("[data-tab]").removeClass('active');
+                $('[data-tab="'+idselecao+'"]').addClass('active');
+                
+                $("select.tabs__menu").val($('option:contains("'+idselecao+'")').val())
+            }
+
+        });
 
     </script>
 </body>
