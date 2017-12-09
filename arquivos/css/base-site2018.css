@@ -1,0 +1,1021 @@
+/* HTML GERAL */
+
+body {
+	color: #464b54;
+	font-family: 'Roboto', sans-serif !important;
+	font-size: 16px !important;
+	line-height: 1.5 !important;
+    letter-spacing: normal !important;
+}
+h1, h2, h3 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	color: #910039;
+	line-height: 1.2 !important;
+}
+h1 strong, h2 strong, h3 strong {
+	font-weight: 700;
+}
+h2 {
+	font-size: 36px;
+	margin-bottom: 1.12em;
+}
+h3 {
+	color: #464b54;
+	font-size: 26px;
+	margin-bottom: 1.12em;
+}
+p {
+	margin-bottom: 1.5em;
+}
+p:last-child {
+	margin-bottom: 0;
+}
+strong {
+    font-weight: 700;
+}
+img {
+    max-width: 100%;
+}
+section {
+	padding: 90px 0;
+}
+
+/* ELEMENTOS GERAIS */
+.fundo {
+	background-color: #fff;
+	border-top: 20px solid #fff;
+	margin-top: -30px;
+}
+.fundo .bg-cinza {
+	background-color: #eee;
+}
+.fundo .bg-vinho {
+	background-color: #910039;
+}
+.fonte-clara * {
+	color: #fff;
+}
+.texto-centro {
+	text-align: center;
+}
+.texto-direita {
+	text-align: right;
+}
+.container {
+	width: 1170px;
+	margin: 0 auto;
+}
+.linha {
+	display: flex;
+	justify-content: center;
+}
+
+/* TOOLTIP */
+.tooltipster-base {
+    pointer-events: auto !important;
+}
+.tooltip_templates {
+    display: none !important;
+}
+.tooltip.tooltipstered {
+    color: #910039;
+    font-weight: 500;
+}
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-background,
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-border {
+    border-top-color: #910039 !important;
+}
+.tooltipster-sidetip .tooltipster-box {
+    border: none !important;
+    background: none !important;
+}
+.tooltipster-sidetip .tooltipster-content {
+    padding: 0 !important;
+}
+.tooltipster-sidetip .tooltipster-box {
+    border: none;
+}
+.tooltipster-content .tooltip-fechar {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    border: 5px solid #910039;
+    font-size: 0;
+    background: #fff;
+    top: -7px;
+    right: -7px;
+    border-radius: 21px;
+    cursor: pointer;
+}
+.tooltipster-content .tooltip-fechar::before,
+.tooltipster-content .tooltip-fechar::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 3px;
+    height: 13px;
+    background: #910039;
+    top: 50%;
+    left: 50%;
+    border-radius: 2px;
+}
+.tooltipster-content .tooltip-fechar::before {
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+.tooltipster-content .tooltip-fechar::after {
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+.tooltipster-content .tooltip-content {
+    background: #910039;
+    cursor: default;
+    color: #fff;
+    display: flex;
+    padding: 20px 10px;
+    border-radius: 10px;
+    align-items: flex-end;
+    z-index: 99;
+    overflow: hidden;
+}
+.tooltipster-content .tooltip-content .tooltip-imagem {
+    width: 70px;
+    overflow: hidden;
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+.tooltipster-content .tooltip-content .tooltip-imagem img {
+    width: auto;
+    max-width: none;
+    height: 170px;
+    transform: translateX(-50px);
+    float: left;
+}
+.tooltipster-content .tooltip-content .tooltip-infos {
+    width: 130px;
+    padding: 0 10px;
+    font-size: 15px;
+}
+.tooltipster-content .tooltip-content .tooltip-infos p {
+    margin-bottom: 10px;
+}
+.tooltipster-content .tooltip-content .tooltip-infos .botao {
+    min-width: auto;
+    padding: 15px;
+    margin-top: 0;
+}
+
+/* BOTÕES */
+.botao {
+	box-sizing: border-box;
+    min-width: 180px;
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: 600;
+    text-align: center;
+	padding: 20px 25px 18px;
+	border-radius: 10px;
+	box-shadow:
+		inset 1px 1px 2px rgba(255,255,255,0.4),
+		inset -1px -1px 2px rgba(0,0,0,0.4),
+		inset 1px 1px 0 rgba(255,255,255,0.4),
+		inset -1px -1px 0 rgba(0,0,0,0.2),
+		0 5px 0 -1px rgba(0,0,9,0.25);
+	background-color: #ccc;
+	background-image: linear-gradient(to top, #ddd, #eee);
+	color: #333;
+	line-height:1;
+	margin-top: 20px;
+	transition: all 0.3s ease;
+}
+.botao:hover {
+	opacity: 0.8;
+}
+.botao.cor-verde {
+    color: #3f490a;
+    background-image: linear-gradient(to top, #a2b10d, #bccd0e);
+    box-shadow:
+		inset 1px 1px 2px rgba(255,255,255,0.4),
+		inset -1px -1px 2px rgba(0,0,0,0.4),
+		inset 1px 1px 0 rgba(255,255,255,0.4),
+		inset -1px -1px 0 rgba(0,0,0,0.2),
+		0 5px 0 -1px rgba(118,154,9,0.25);
+}
+.botao.cor-vinho {
+    color: white;
+    background-image: linear-gradient(to top, #6c002b, #910039);
+    box-shadow:
+		inset 1px 1px 2px rgba(255,255,255,0.4),
+		inset -1px -1px 2px rgba(0,0,0,0.4),
+		inset 1px 1px 0 rgba(255,255,255,0.4),
+		inset -1px -1px 0 rgba(0,0,0,0.2),
+		0 5px 0 -1px rgba(77,0,30,0.25);
+}
+
+/* PREÇOS */
+p.preco {
+    font-size: 45px;
+    font-weight: 900;
+    color: #333;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    line-height: 1;
+}
+p.preco span {
+    line-height: 45px;
+    font-size: 25px;
+    vertical-align: top;
+}
+
+/* CARROSSEL */
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-nav .owl-prev {
+	width: 47px;
+	height: 47px;
+	position: absolute;
+	top: calc(50% - 23.5px);
+	background-image: url(../images/carrossel-setas.png);
+	background-color: transparent;
+	font-size: 0;
+	transition: all 0.3s ease;
+}
+.owl-carousel .owl-nav .owl-prev {
+	left: -70px;
+	background-position: 0 0;
+}
+.owl-carousel .owl-nav .owl-prev:hover {
+	background-position: -7px 0;
+}
+.owl-carousel .owl-nav .owl-next {
+	right: -70px;
+	background-position: 47px 0;
+}
+.owl-carousel .owl-nav .owl-next:hover {
+	background-position: 54px 0;
+}
+
+/* TAB PLANOS */
+.tabs.plano {
+    text-align: center;
+}
+.tabs.plano .tabs__menu {
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: 18px;
+}
+.tabs.plano .tabs__menu li {
+    color: #a2a2a2;
+    font-size: 16px;
+    display: inline-block;
+    padding: 5px 15px 3px;
+    margin-bottom: -3px;
+    border-bottom: 5px solid rgba(145,0,57,0);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.tabs.plano .tabs__menu li.active {
+    color: #910039;
+    border-bottom: 5px solid rgba(145,0,57,1);
+}
+.tabs.plano .tabs__content {
+    box-sizing: border-box;
+    font-size: 15px;
+}
+.tabs.plano .tabs__content p {
+    margin-bottom: 10px;
+}
+.tabs.plano .tabs__content p.destaque {
+    font-weight: 700;
+    color: #910039;
+    font-size: 19px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+}
+.tabs.plano .tabs__content p.preco {
+    color: #910039;
+}
+.tabs.plano .tabs__content .botao {
+    margin-top: 0;
+    margin-bottom: 15px
+}
+.tabs.plano .tabs__content p.obs {
+    font-size: 13px;
+    line-height: 1.2;
+}
+.tabs.plano .tabs__content p.aviso {
+    font-size: 17px;
+    font-weight: 700;
+    color: #7d8f04;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+/* ELEMENTOS HOME */
+
+/* VINHOCLUB */
+#vinhoclub {
+    padding: 50px;
+}
+#vinhoclub .container {
+    position: relative;
+}
+#vinhoclub .header {
+    position: absolute;
+    width: 460px;
+    top: 10px;
+    padding-bottom: 20px;
+}
+#vinhoclub .header h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 30px 0 30px;
+}
+
+#vinhoclub .tabs.club > .tabs__menu {
+    position: absolute !important;
+    padding-bottom: 20px;
+}
+#vinhoclub .tabs.club > .tabs__content {
+    width: 100%;
+}
+#vinhoclub .tabs.club .informacao {
+    display: flex !important;
+    width: 100%;
+}
+#vinhoclub .tabs.club .informacao::after {
+    display: none;
+}
+#vinhoclub .tabs.club .informacao > .extras {
+    width: 490px;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+#vinhoclub .tabs.club .informacao > .extras li {
+    position: relative;
+    padding-left: 38px;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    width: 70%;
+}
+#vinhoclub .tabs.club .informacao > .extras li::before {
+    font-family: FontAwesome;
+    content: "\f058";
+    position: absolute;
+    color: #a2b10d;
+    left: 0;
+    font-size: 31px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#vinhoclub .tabs.club .informacao > .imagens {
+    width: calc((100% - 490px)/2 + 15px);
+    padding-right: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+}
+#vinhoclub .tabs.club .informacao > .imagens .vinhos {
+    height: 455px;
+    font-size: 0;
+    display: flex;
+    position: relative;
+    margin-bottom: 60px;
+    justify-content: center;
+}
+#vinhoclub .tabs.club .informacao > .imagens .vinhos div {
+    width: 50%;
+    position: relative;
+}
+#vinhoclub .tabs.club .informacao > .imagens .vinhos div::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #ddd;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#vinhoclub .tabs.club .informacao > .imagens .vinhos div:nth-of-type(1)::after {
+    background-color: #76a1b5;
+}
+#vinhoclub .tabs.club .informacao > .imagens .vinhos div:nth-of-type(2)::after {
+    background-color: #d1b580;
+}
+#vinhoclub .tabs.club .informacao > .imagens .vinhos div:nth-of-type(3)::after {
+    background-color: #abb28a;
+}
+#vinhoclub .tabs.club .informacao > .imagens .vinhos div img {
+    position: absolute;
+    height: 100%;
+    max-width: none;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#vinhoclub .tabs.club .informacao > .imagens .vinhos div:nth-of-type(3) {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 25px;
+}
+#vinhoclub .tabs.club .informacao > .infos {
+    width: calc((100% - 490px)/2 - 15px);
+    box-sizing: border-box;
+}
+#vinhoclub .tabs.club .informacao > .infos .tabs.plano {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+#vinhoclub .tabs.club .informacao > .infos .tabs.plano .tabs__content p.destaque {
+    font-size: 15px;
+    font-weight: 400;
+    color: #464b54;
+}
+#vinhoclub .tabs.club .informacao > .infos .tabs.plano .tabs__content p.destaque strong {
+    font-weight: 700;
+}
+#vinhoclub .tabs.club .informacao > .infos .tabs.plano .tabs__content p.aviso {
+    width: 100%;
+    position: absolute;
+}
+#vinhoclub .tabs.club .informacao > .infos > ul {
+    height: 11em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+#vinhoclub .tabs.club .informacao > .infos > ul li {
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 1em;
+    padding-left: 36px;
+    position: relative;
+}
+#vinhoclub .tabs.club .informacao > .infos > ul li::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 3px;
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+}
+#vinhoclub .tabs.club .informacao > .infos > ul li:nth-of-type(1)::before {
+    background-color: #76a1b5;
+}
+#vinhoclub .tabs.club .informacao > .infos > ul li:nth-of-type(2)::before {
+    background-color: #d1b580;
+}
+#vinhoclub .tabs.club .informacao > .infos > ul li:nth-of-type(3)::before {
+    background-color: #abb28a;
+}
+#vinhoclub .tabs.club .informacao > .infos > ul li:last-of-type {
+    margin-bottom: 0;
+}
+
+/* VANTAGENS */
+#vantagens .linha .col {
+	text-align: center;
+	padding: 0 40px;
+	font-size: 15px;
+}
+.circulo {
+	font-weight: 900;
+	width: 116px;
+	height: 116px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align:center;
+	border-radius: 100%;
+	border: 5px solid #f7931d;
+	font-size: 46px;
+	line-height: 1;
+	margin-bottom: 15px;
+}
+#vantagens .linha .col:last-child .circulo {
+	font-size: 36px;
+}
+
+
+/* PASSO-A-PASSO */
+.icone {
+	width:96px;
+	height: 96px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 30px;
+}
+#passo-a-passo .col {
+	width: 270px;
+}
+#passo-a-passo .col h3 {
+	color: #910039;
+	font-size: 24px;
+	font-weight: 500;
+	margin-bottom: 50px;
+	text-align: center;
+	padding: 0 15px;
+}
+#passo-a-passo .col p {
+	font-style: italic;
+}
+#passo-a-passo .seta {
+	width: 130px;
+	background: url(../images/icone-seta.png) no-repeat center 132px;
+}
+
+/* CASA RIO VERDE */
+#casa-rio-verde {
+	background-image: url(../images/casa_rio_verde-bg.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+#casa-rio-verde .col {
+	width: 360px;
+	margin:0 45px;
+}
+#casa-rio-verde .col:nth-of-type(2) {
+	font-size: 18px;
+}
+#casa-rio-verde .col:nth-of-type(2) h3 {
+	font-family: 'Lora', serif;
+	font-size: 30px;
+	font-style: italic;
+	color: #b8c721;
+	margin: 0;
+}
+
+/* DEPOIMENTOS */
+.depoimentos.owl-carousel {
+	width: calc(100% - 140px);
+	margin: 0 auto;
+}
+.depoimentos .item {
+	text-align: center;
+}
+.depoimentos .item h3 {
+	font-size: 0;
+	width: 100%;
+	height: 58px;
+	margin-bottom: 15px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.depoimentos .item.selecao-unique h3 {
+	background-image: url(../images/depoimento-selo-unique.png);
+}
+.depoimentos .item.selecao-platinum h3 {
+	background-image: url(../images/depoimento-selo-platinum.png);
+}
+.depoimentos .item.selecao-ouro h3 {
+	background-image: url(../images/depoimento-selo-ouro.png);
+}
+
+.depoimentos .item .foto {
+	width: 178px;
+	height: 178px;
+	background-color: #ddd;
+	margin: 0 auto 20px;
+	overflow: hidden;
+	border-radius: 100px;
+}
+.depoimentos .item h4 {
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+.depoimentos .item.selecao-unique h4 {
+	color: #910039;
+}
+.depoimentos .item.selecao-platinum h4 {
+	color: #bb8034;
+}
+.depoimentos .item.selecao-ouro h4 {
+	color: #d39b04;
+}
+.depoimentos .item .local p {
+	line-height: 1.3;
+	margin: 0;
+}
+.depoimentos .item .texto {
+	font-size: 15px;
+	font-style: italic;
+	padding-top: 40px;
+	background-image: url(../images/depoimento-selo-unique.png);
+	background-position: center -48px;
+	background-repeat: no-repeat;
+	margin-top: 30px;
+}
+.depoimentos .item.selecao-unique .texto {
+	background-image: url(../images/depoimento-selo-unique.png);
+}
+.depoimentos .item.selecao-platinum .texto {
+	background-image: url(../images/depoimento-selo-platinum.png);
+}
+.depoimentos .item.selecao-ouro .texto {
+	background-image: url(../images/depoimento-selo-ouro.png);
+}
+
+
+/* INFORMAÇÕES */
+#informacoes .tabs.selecao > ul.tabs__menu {
+	text-align: center;
+	font-size: 0;
+	display: flex;
+	justify-content: space-evenly;
+}
+#informacoes .tabs.selecao > ul.tabs::after {
+	display: none;
+}
+#informacoes .tabs.selecao > ul.tabs__menu li {
+	margin: 0;
+	padding: 0;
+	padding: 15px 20px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+#informacoes .tabs.selecao > ul.tabs__menu li:hover,
+#informacoes .tabs.selecao > ul.tabs__menu li.active {
+	background-color: #eee;
+}
+#informacoes .tabs.selecao > ul.tabs__menu li img {
+	width: auto;
+	height: 63px;
+}
+#informacoes .tabs.selecao > .tabs__content {
+    height: 860px !important;
+}
+#informacoes .tabs.selecao .informacao {
+	display: flex !important;
+	margin-top: 120px;
+    width: 100%;
+}
+#informacoes .tabs.selecao .informacao .lista-itens {
+	padding: 30px 15px 50px;
+	background-color: #dcdcdc;
+	border-radius: 10px 0 0 10px;
+	display: flex;
+	justify-content: space-between;
+	width: 775px;
+	box-sizing: border-box;
+}
+#informacoes .tabs.selecao .informacao[data-produtos='3'] .lista-itens {
+	width: 855px;
+}
+#informacoes .tabs.selecao .informacao .lista-itens img {
+	width: 100%;
+}
+#informacoes .tabs.selecao .informacao .lista-itens .item {
+	width: 100%;
+	position: relative;
+	padding: 0 15px 70px;
+}
+#informacoes .tabs.selecao .informacao .lista-itens .item::after {
+	content: '';
+	position: absolute;
+	width:1px;
+	height: 50%;
+	background-color: #fff;
+	right: 0;
+	bottom: 25px;
+}
+#informacoes .tabs.selecao .informacao .lista-itens .item:last-of-type::after {
+	display: none;
+}
+#informacoes .tabs.selecao .informacao .lista-itens .item .content {
+	width: 225px;
+	font-size: 14px;
+	margin: 0 auto;
+}
+#informacoes .tabs.selecao .informacao .lista-itens .item .imagem {
+	position: relative;
+	height: 440px;
+	overflow: hidden;
+	margin-top: -100px;
+}
+#informacoes .tabs.selecao .informacao .lista-itens .item .imagem img {
+	position: absolute;
+	width: auto;
+    max-width: none;
+	height: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+#informacoes .tabs.selecao .informacao .lista-itens .item .detalhes {
+	position: absolute;
+	left: 50%;
+	top: 125px;
+	transform: translateX(65px);
+	z-index: 2;
+}
+#informacoes .tabs.selecao .informacao .lista-itens .item .detalhes .bandeira,
+#informacoes .tabs.selecao .informacao .lista-itens .item .detalhes .uva::after {
+	width: 28px;
+	height: 28px;
+	margin-bottom: 5px;
+}
+#informacoes .tabs.selecao .informacao .lista-itens .item .detalhes .bandeira {
+	width: 28px;
+	height: 28px;
+	background-image: url(../images/bandeira.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+#informacoes .tabs.selecao .informacao .lista-itens .item .detalhes .uva::after {
+	content: '';
+	background-image: url(../images/icone-uva.png);
+}
+#informacoes .tabs.selecao .informacao .lista-itens .item .detalhes .uva {
+	position: relative;
+}
+#informacoes .tabs.selecao .informacao .lista-itens .item .detalhes .uva ul {
+	background: #910039;
+	min-width: 190px;
+	padding: 20px 20px 20px 35px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50px;
+	transform: translateY(-50%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+}
+#informacoes .tabs.selecao .informacao .lista-itens .item .detalhes .uva:hover ul {
+	opacity: 1;
+	visibility: visible;
+}
+#informacoes .tabs.selecao .informacao .lista-itens .item .detalhes .uva ul::before {
+	content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+	border-radius: 2px;
+    background: #910039;
+    left: 0;
+    top: 50%;
+    transform: translate(-10px,-50%) rotate(45deg);
+}
+#informacoes .tabs.selecao .informacao .lista-itens .item .detalhes .uva ul li {
+	font-size: 13px;
+	list-style: disc;
+	color: #fff;
+	white-space: nowrap;
+}
+#informacoes .tabs.selecao .informacao .lista-itens .item .content h3 {
+	font-family: 'Roboto', sans-serif !important;
+	font-size: 15px;
+	font-weight: 600;
+	text-transform: uppercase;
+	width: 100%;
+	height: 3.38em;
+	margin: 1em 0 1.8em;
+	display: flex;
+	align-items: flex-end;
+}
+#informacoes .tabs.selecao .informacao .lista-itens .item .content .botao {
+	position: absolute;
+	bottom: 0;
+	margin-left: 10px;
+}
+#informacoes .tabs.selecao .informacao .infos {
+	background:#eee;
+	width: calc(100% - 775px);
+	border-radius: 0 10px 10px 0;
+	padding: 45px 15px
+}
+#informacoes .tabs.selecao .informacao[data-produtos='3'] .infos {
+	width: calc(100% - 855px);
+}
+#informacoes .tabs.selecao .informacao .infos .content {
+	text-align: center;
+	width: 265px;
+	margin: 0 auto;
+}
+#informacoes .tabs.selecao .informacao .infos .content h2 {
+	margin-bottom: 20px;
+}
+
+/* 1 PRODUTO */
+#informacoes .tabs.selecao .informacao[data-produtos='1'] .lista-itens {
+    padding: 30px 15px 30px;
+}
+#informacoes .tabs.selecao .informacao[data-produtos='1'] .lista-itens .item {
+	display: flex;
+	padding: 0 15px;
+}
+#informacoes .tabs.selecao .informacao[data-produtos='1'] .lista-itens .item .imagem {
+	margin: 0;
+	width: 320px;
+	height: 680px;
+}
+#informacoes .tabs.selecao .informacao[data-produtos='1'] .lista-itens .item .imagem::after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 1px;
+	height: 40%;
+	background-color: #fff;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
+#informacoes .tabs.selecao .informacao[data-produtos='1'] .lista-itens .item .detalhes {
+    position: absolute;
+    left: 230px;
+    top: 105px;
+    transform: none;
+}
+#informacoes .tabs.selecao .informacao[data-produtos='1'] .lista-itens .item .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	padding-top: 50px;
+}
+#informacoes .tabs.selecao .informacao[data-produtos='1'] .lista-itens .item .content .botao {
+	position: static;
+	margin-left: 0;
+}
+
+/* ATENÇÃO */
+#atencao {
+    background-image: url(../images/atencao-bg.png);
+    background-position: center center;
+}
+#atencao h2 {
+    margin-bottom: 10px;
+}
+#atencao h3 {
+    font-size: 29px;
+}
+
+/*COMPROVE */
+#comprove {
+    padding-bottom: 30px;
+}
+#comprove h2 {
+    margin-bottom: -150px;
+    padding-left: 323px;
+    font-size: 30px;
+}
+#comprove .tabs.comprove {
+overflow: hidden;
+    position: relative;
+}
+#comprove .tabs.comprove .js-tabs-height {
+    width: 85.2%;
+    margin: 0 auto;
+    margin-bottom: 45px;
+    position: absolute;
+    left: 6.6%;
+    top: -220px;
+}
+#comprove .tabs.comprove .tabs__content {
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    margin-top: 220px;
+    margin-bottom: 280px;
+}
+#comprove .tabs.comprove .informacao.owl-carousel .owl-nav .owl-prev {
+    left: -50px;
+}
+#comprove .tabs.comprove .informacao .item {
+    width: 100%;
+}
+#comprove .tabs.comprove .informacao .item > .infos {
+    display: flex !important;
+    width: 100%;
+    margin-top: 250px;
+    margin-bottom: 80px;
+}
+#comprove .tabs.comprove .informacao .item > .infos > div {
+    color: #8991a0;
+    width: calc(25% - 50px);
+    font-size: 15px;
+    line-height: 1.3;
+}
+#comprove .tabs.comprove .informacao .item > .infos > div.vinho {
+    width: 25%;
+    position: relative;
+}
+#comprove .tabs.comprove .informacao .item > .infos > div.vinho .imagem,
+#comprove .tabs.comprove .informacao .item > .infos > div.vinho .infos {
+    position: absolute;
+}
+#comprove .tabs.comprove .informacao .item > .infos > div.vinho .imagem {
+    width: 100%;
+    height: 440px;
+    overflow: hidden;
+    bottom: -80px;
+}
+#comprove .tabs.comprove .informacao .item > .infos > div.vinho .imagem img {
+	position: absolute;
+	width: auto;
+    max-width: none;
+	height: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+#comprove .tabs.comprove .informacao .item > .infos > div.vinho .infos {
+    bottom: -220px;
+}
+#comprove .tabs.comprove .informacao .item > .infos > div.vantagem,
+#comprove .tabs.comprove .informacao .item > .infos > div.vantagem .preco {
+    color: #910039;
+}
+#comprove .tabs.comprove .informacao .item > .infos > div.seta {
+    width: 90px;
+    background-image: url(../images/icone-seta-pequeno.png);
+    background-position: center 40px;
+    background-repeat: no-repeat;
+}
+#comprove .tabs.comprove .informacao .item > .extras {
+    position: relative;
+    margin-top: 100px;
+    width: 25%;
+    height: 210px;
+    text-align: center;
+}
+#comprove .tabs.comprove .informacao .item > .extras h3 {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #910039;
+    margin-bottom: 20px;
+}
+#comprove .tabs.comprove .informacao .item > .extras a {
+    margin-top: 0;
+}
+#comprove .tabs.comprove .informacao .item > .extras img {
+    position: absolute;
+    left: calc(100% + 30px);
+    top: -22px;
+    z-index: 2;
+}
+#comprove .tabs.comprove .informacao .item > .extras .desconto {
+    position: absolute;
+    top: -110px;
+    right: -620px;
+    background-image: url(../images/selo-desconto.png);
+    width: 368px;
+    height: 322px;
+}
+#comprove .tabs.comprove .informacao .item > .extras .desconto span {
+    width: 170px;
+    display: block;
+    font-size: 68px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 0.9;
+    position: absolute;
+    transform: rotate(50.5deg);
+    top: 120px;
+    left: 80px;
+    color: #900c28;
+}
+#comprove p.preco {
+    font-size: 46px;
+    color: #8991a0;
+    margin-bottom: 20px;
+}
+#comprove p.preco span {
+    line-height: normal;
+    font-size: 26px;
+    vertical-align: middle;
+}
+
+#comprove .tabs__menu {
+    position: absolute !important;
+    bottom: 0;
+    right: 0;
+}
+
+/* NOSSO LAR */
+#nosso-lar {
+    padding: 90px 0 60px;
+}
+#nosso-lar .container {
+    display: flex;
+}
+#nosso-lar .col-left {
+    width: 40%;
+    text-align: center;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+#nosso-lar .col-right {
+    width: 60%;
+    text-align: right;
+}
