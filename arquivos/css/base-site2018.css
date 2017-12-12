@@ -91,7 +91,7 @@ section {
 	text-align: right;
 }
 .container {
-	width: 1170px;
+	width: 1110px;
 	margin: 0 auto;
 }
 .linha {
@@ -249,10 +249,18 @@ p.preco {
     margin-bottom: 30px;
     line-height: 1;
 }
-p.preco span {
+p.preco span.moeda {
     line-height: 45px;
     font-size: 25px;
     vertical-align: top;
+}
+p.preco span.obs {
+    font-size: 15px;
+    font-weight: 400;
+    display: inline-block;
+    width: 70px;
+    line-height: 1;
+    text-align: left;
 }
 
 /* CARROSSEL */
@@ -320,6 +328,8 @@ p.preco span {
 }
 .tabs.plano .tabs__content p.preco {
     color: #910039;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .tabs.plano .tabs__content .botao {
     margin-top: 0;
@@ -374,7 +384,7 @@ p.preco span {
     display: none;
 }
 #vinhoclub .tabs.club .informacao > .extras {
-    width: 490px;
+    width: 475px;
     padding-right: 30px;
     box-sizing: border-box;
 }
@@ -449,7 +459,7 @@ p.preco span {
     top: 25px;
 }
 #vinhoclub .tabs.club .informacao > .infos {
-    width: calc((100% - 490px)/2 - 15px);
+    width: calc((100% - 490px)/2 - 5px);
     box-sizing: border-box;
 }
 #vinhoclub .tabs.club .informacao > .infos .tabs.plano {
@@ -508,6 +518,9 @@ p.preco span {
 }
 
 /* VANTAGENS */
+#vantagens {
+    padding: 60px 0;
+}
 #vantagens .linha .col {
 	text-align: center;
 	padding: 0 40px;
@@ -542,6 +555,9 @@ p.preco span {
 	justify-content: center;
 	margin: 0 auto 30px;
 }
+#passo-a-passo .linha {
+    padding: 0 30px;
+}
 #passo-a-passo .col {
 	width: 270px;
 }
@@ -549,12 +565,14 @@ p.preco span {
 	color: #910039;
 	font-size: 24px;
 	font-weight: 500;
-	margin-bottom: 50px;
+	margin-bottom: 40px;
 	text-align: center;
 	padding: 0 15px;
 }
 #passo-a-passo .col p {
 	font-style: italic;
+    font-size: 15px;
+    line-height: 1.4;
 }
 #passo-a-passo .seta {
 	width: 130px;
@@ -579,7 +597,7 @@ p.preco span {
 	font-size: 30px;
 	font-style: italic;
 	color: #b8c721;
-	margin: 0;
+	margin-bottom: 5px;
 }
 
 /* DEPOIMENTOS */
@@ -655,6 +673,9 @@ p.preco span {
 
 
 /* INFORMAÇÕES */
+#informacoes .container > h3 {
+    font-weight: 500;
+}
 #informacoes .tabs.selecao > ul.tabs__menu {
 	text-align: center;
 	font-size: 0;
@@ -881,12 +902,15 @@ p.preco span {
 #atencao {
     background-image: url(../images/atencao-bg.png);
     background-position: center center;
+    padding: 80px 0;
 }
 #atencao h2 {
     margin-bottom: 10px;
+    color: #eee;
 }
 #atencao h3 {
     font-size: 29px;
+    color: #eee;
 }
 
 /*COMPROVE */
@@ -918,18 +942,21 @@ p.preco span {
 #comprove .tabs.comprove .tabs__content {
     position: relative;
     border-radius: 10px;
-    width: 88.1%;
-    margin: 0 auto 0 4.6%;
     z-index: 2;
 }
 #comprove .tabs.comprove .informacao.owl-carousel .owl-nav .owl-prev {
-    left: -30px;
+    left: 12px;
+}
+#comprove .tabs.comprove .informacao.owl-carousel .owl-nav .owl-next {
+    right: 12px;
 }
 #comprove .tabs.comprove .informacao {
     top: -210px;
 }
 #comprove .tabs.comprove .informacao .item {
     width: 100%;
+    padding: 0 60px 0 20px;
+    box-sizing: border-box;
 }
 #comprove .tabs.comprove .informacao .item > .infos {
     display: flex !important;
@@ -939,12 +966,12 @@ p.preco span {
 }
 #comprove .tabs.comprove .informacao .item > .infos > div {
     color: #8991a0;
-    width: calc(25% - 50px);
+    width: calc(23% - 45px);
     font-size: 15px;
     line-height: 1.3;
 }
 #comprove .tabs.comprove .informacao .item > .infos > div.vinho {
-    width: 25%;
+    width: 24%;
     position: relative;
 }
 #comprove .tabs.comprove .informacao .item > .infos > div.vinho .imagem,
@@ -1027,6 +1054,7 @@ p.preco span {
     font-size: 46px;
     color: #8991a0;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 #comprove p.preco span {
     line-height: normal;
@@ -1037,6 +1065,7 @@ p.preco span {
 #comprove .tabs__menu {
     position: absolute !important;
     right: 0;
+    width: 300px;
 }
 
 /* NOSSO LAR */
@@ -1077,7 +1106,7 @@ select.tabs__menu option:first-child {
     display: none;
 }
 select.tabs__menu {
-    width: 300px;
+    width: 350px;
     height: 46px;
     font-size: 15px;
     margin:0;
@@ -1100,5 +1129,5 @@ select.tabs__menu option {
 }
 
 #casa-rio-verde .tabs__menu {
-    margin-top: 20px;
+    margin-top: 30px;
 }
