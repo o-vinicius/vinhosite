@@ -269,7 +269,7 @@ p.preco span.obs {
 	width: 47px;
 	height: 47px;
 	position: absolute;
-	top: calc(50% - 23.5px);
+	top: 135px;
 	background-image: url(../images/carrossel-setas.png);
 	background-color: transparent;
 	font-size: 0;
@@ -333,14 +333,15 @@ p.preco span.obs {
 }
 .tabs.plano .tabs__content .botao {
     margin-top: 0;
-    margin-bottom: 15px
+    margin-bottom: 20px
 }
 .tabs.plano .tabs__content p.obs {
     font-size: 13px;
     line-height: 1.2;
+    margin-bottom: 0;
 }
 .tabs.plano .tabs__content p.aviso {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 700;
     color: #7d8f04;
     margin-top: 30px;
@@ -361,11 +362,12 @@ p.preco span.obs {
     width: 460px;
     top: 10px;
     padding-bottom: 20px;
+    font-size: 18px;
 }
 #vinhoclub .header h2 {
     font-size: 26px;
     font-weight: 700;
-    margin: 30px 0 30px;
+    margin: 45px 0 35px;
 }
 
 #vinhoclub .tabs.club > .tabs__menu {
@@ -393,7 +395,7 @@ p.preco span.obs {
     padding-left: 38px;
     font-size: 16px;
     line-height: 1.2;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     width: 70%;
 }
 #vinhoclub .tabs.club .informacao > .extras li::before {
@@ -480,7 +482,7 @@ p.preco span.obs {
     position: absolute;
 }
 #vinhoclub .tabs.club .informacao > .infos > ul {
-    height: 11em;
+    /*height: 11em;*/
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -519,7 +521,7 @@ p.preco span.obs {
 
 /* VANTAGENS */
 #vantagens {
-    padding: 60px 0;
+    padding: 50px 0;
 }
 #vantagens .linha .col {
 	text-align: center;
@@ -571,7 +573,7 @@ p.preco span.obs {
 }
 #passo-a-passo .col p {
 	font-style: italic;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.4;
 }
 #passo-a-passo .seta {
@@ -601,6 +603,9 @@ p.preco span.obs {
 }
 
 /* DEPOIMENTOS */
+#depoimentos h2 {
+    margin-bottom: 50px;
+}
 .depoimentos.owl-carousel {
 	width: calc(100% - 140px);
 	margin: 0 auto;
@@ -775,6 +780,7 @@ p.preco span.obs {
 	margin-bottom: 5px;
 }
 #informacoes .tabs.selecao .informacao .lista-itens .item .detalhes .bandeira {
+    position: relative;
 	width: 28px;
 	height: 28px;
 	background-image: url(../images/bandeira.png);
@@ -788,40 +794,44 @@ p.preco span.obs {
 #informacoes .tabs.selecao .informacao .lista-itens .item .detalhes .uva {
 	position: relative;
 }
+#informacoes .tabs.selecao .informacao .lista-itens .item .detalhes .bandeira span,
 #informacoes .tabs.selecao .informacao .lista-itens .item .detalhes .uva ul {
+    color: #fff;
 	background: #910039;
 	min-width: 190px;
-	padding: 20px 20px 20px 35px;
+	padding: 15px;
 	border-radius: 10px;
 	box-sizing: border-box;
 	position: absolute;
 	top: 50%;
-	left: 50px;
+	left: 45px;
 	transform: translateY(-50%);
 	opacity: 0;
 	visibility: hidden;
 	transition: all 0.3s ease;
 }
+#informacoes .tabs.selecao .informacao .lista-itens .item .detalhes .bandeira:hover span,
 #informacoes .tabs.selecao .informacao .lista-itens .item .detalhes .uva:hover ul {
 	opacity: 1;
 	visibility: visible;
 }
+#informacoes .tabs.selecao .informacao .lista-itens .item .detalhes .bandeira span::before,
 #informacoes .tabs.selecao .informacao .lista-itens .item .detalhes .uva ul::before {
 	content: '';
     position: absolute;
-    width: 22px;
-    height: 22px;
+    width: 17px;
+    height: 17px;
 	border-radius: 2px;
     background: #910039;
     left: 0;
     top: 50%;
-    transform: translate(-10px,-50%) rotate(45deg);
+    transform: translate(-8px,-50%) rotate(45deg);
 }
 #informacoes .tabs.selecao .informacao .lista-itens .item .detalhes .uva ul li {
 	font-size: 13px;
 	list-style: disc;
-	color: #fff;
 	white-space: nowrap;
+    margin-left: 15px;
 }
 #informacoes .tabs.selecao .informacao .lista-itens .item .content h3 {
 	font-family: 'Roboto', sans-serif !important;
@@ -919,7 +929,8 @@ p.preco span.obs {
 }
 #comprove h2 {
     margin-top: 30px;
-    padding-left: 323px;
+    margin-bottom: 60px;
+    padding-left: calc((100% - 80px)*24/100 + 20px);
     font-size: 30px;
 }
 #comprove .tabs.comprove {
@@ -955,14 +966,17 @@ p.preco span.obs {
 }
 #comprove .tabs.comprove .informacao .item {
     width: 100%;
-    padding: 0 60px 0 20px;
-    box-sizing: border-box;
 }
 #comprove .tabs.comprove .informacao .item > .infos {
     display: flex !important;
     width: 100%;
-    margin-top: 250px;
-    margin-bottom: 80px;
+    height: auto!important;
+    margin-top: 225px;
+    margin-bottom: 65px;
+    padding: 25px 60px 35px 20px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 10px;
 }
 #comprove .tabs.comprove .informacao .item > .infos > div {
     color: #8991a0;
@@ -974,15 +988,13 @@ p.preco span.obs {
     width: 24%;
     position: relative;
 }
-#comprove .tabs.comprove .informacao .item > .infos > div.vinho .imagem,
-#comprove .tabs.comprove .informacao .item > .infos > div.vinho .infos {
-    position: absolute;
-}
+
 #comprove .tabs.comprove .informacao .item > .infos > div.vinho .imagem {
+    position: absolute;
     width: 100%;
     height: 440px;
     overflow: hidden;
-    bottom: -80px;
+    bottom: -65px;
 }
 #comprove .tabs.comprove .informacao .item > .infos > div.vinho .imagem img {
 	position: absolute;
@@ -991,9 +1003,6 @@ p.preco span.obs {
 	height: 100%;
 	left: 50%;
 	transform: translateX(-50%);
-}
-#comprove .tabs.comprove .informacao .item > .infos > div.vinho .infos {
-    bottom: -220px;
 }
 #comprove .tabs.comprove .informacao .item > .infos > div.vantagem,
 #comprove .tabs.comprove .informacao .item > .infos > div.vantagem .preco {
@@ -1007,7 +1016,6 @@ p.preco span.obs {
 }
 #comprove .tabs.comprove .informacao .item > .extras {
     position: relative;
-    margin-top: 100px;
     width: 24%;
     height: 210px;
     text-align: center;
